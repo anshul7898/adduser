@@ -25,7 +25,7 @@ const ContactUs = () => {
             Please Select the Cuisine
           </Dropdown.Toggle>
           <Dropdown.Menu>
-            <Dropdown.Item href="#adduser">SOUTH INDIAN</Dropdown.Item>
+            <Dropdown.Item href="adduser">SOUTH INDIAN</Dropdown.Item>
             <Dropdown.Item href="newticket">THALI</Dropdown.Item>
             <Dropdown.Item href="adduser">HOT BEVERAGES</Dropdown.Item>
             <Dropdown.Item href="adduser">NORTH INDIAN CHAT</Dropdown.Item>

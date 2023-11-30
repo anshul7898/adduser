@@ -23,7 +23,7 @@ const router = createBrowserRouter([
       { path: "contactus", element: <AddUser /> },
       { path: "newbooking", element: <NewBooking /> },
       { path: "searchprn", element: <SearchPrn /> },
-      { path: "adduser", element: <ContactUs /> },
+      { path: "/adduser", element: <ContactUs /> },
       { path: "newticket", element: <NewTicket /> },
       { path: "viewticket", element: <ViewTicket /> },
       { path: "cancelticket", element: <CancelTicket /> },

@@ -13,7 +13,6 @@ import StatusContext from "./store/status-context";
 import React, { useState, useEffect } from "react";
 import Admin from "./Components/Admin";
 import ViewSearchedTicket from "./Components/ViewSearchedTicket";
-import { Routes, Route, Redirect } from "react-router-dom";
 
 const router = createBrowserRouter([
   {
@@ -21,15 +20,15 @@ const router = createBrowserRouter([
     element: <RootLayout />,
     children: [
       { index: true, element: <Home /> },
-      { exact, path: "/adduser", element: {AddUser } },
-      { exact, path: "/newbooking", Component: {NewBooking} },
-      { exact, path: "/searchprn", element: <SearchPrn /> },
-      { exact, path: "/contactus", element: {ContactUs} },
-      { exact, path: "newticket", element: <NewTicket /> },
-      { exact, path: "viewticket", element: <ViewTicket /> },
-      { exact, path: "cancelticket", element: <CancelTicket /> },
-      { exact, path: "admin", element: <Admin /> },
-      { exact, path: "viewsearchedticket", element: <ViewSearchedTicket /> },
+      {  path: "/adduser", element: <AddUser /> },
+      {  path: "/newbooking", element: <NewBooking/> },
+      {  path: "/searchprn", element: <SearchPrn /> },
+      {  path: "/contactus", element: <ContactUs />},
+      {  path: "newticket", element: <NewTicket /> },
+      {  path: "viewticket", element: <ViewTicket /> },
+      {  path: "cancelticket", element: <CancelTicket /> },
+      {  path: "admin", element: <Admin /> },
+      {  path: "viewsearchedticket", element: <ViewSearchedTicket /> },
     ],
   },
 ]);
@@ -81,12 +80,17 @@ function App() {
   };
 
   return (
-    <Routes>
-    <Route exact path="/" component={Home} />
-    <Route exact path="/adduser" component={AddUser} />
-    <Route exact path="/contactus" component={ContactUs} />
-    <Redirect to="/" />
-  </Routes>
+    <StatusContext.Provider
+      value={{
+        whatStatus: changedStatus,
+        onchangeApprove: changedStatusApprove,
+        onchangeCancel: chegedStatusCancel,
+        deleteIdState: IdState,
+        deleteId: changeDeleteId,
+      }}
+    >
+      <RouterProvider router={router} />
+    </StatusContext.Provider>
   );
 }
 

@@ -20,10 +20,10 @@ const router = createBrowserRouter([
     element: <RootLayout />,
     children: [
       { index: true, element: <Home /> },
-      { exact, path: "/adduser", element: <AddUser /> },
-      { exact, path: "/newbooking", element: <NewBooking /> },
+      { exact, path: "/adduser", element: {AddUser } },
+      { exact, path: "/newbooking", Component: {NewBooking} },
       { exact, path: "/searchprn", element: <SearchPrn /> },
-      { exact, path: "/contactus", element: <ContactUs /> },
+      { exact, path: "/contactus", element: {ContactUs} },
       { exact, path: "newticket", element: <NewTicket /> },
       { exact, path: "viewticket", element: <ViewTicket /> },
       { exact, path: "cancelticket", element: <CancelTicket /> },

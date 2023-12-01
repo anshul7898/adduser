@@ -80,17 +80,12 @@ function App() {
   };
 
   return (
-    <StatusContext.Provider
-      value={{
-        whatStatus: changedStatus,
-        onchangeApprove: changedStatusApprove,
-        onchangeCancel: chegedStatusCancel,
-        deleteIdState: IdState,
-        deleteId: changeDeleteId,
-      }}
-    >
-      <RouterProvider router={router} />
-    </StatusContext.Provider>
+    <Routes>
+    <Route exact path="/" component={Home} />
+    <Route exact path="/adduser" component={AddUser} />
+    <Route exact path="/contactus" component={ContactUs} />
+    <Redirect to="/" />
+  </Routes>
   );
 }
 

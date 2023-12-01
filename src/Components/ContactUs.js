@@ -1,6 +1,11 @@
 import React from "react";
 import Dropdown from "react-bootstrap/Dropdown";
+import { useNavigate } from "react-router-dom";
 const ContactUs = () => {
+  const navigate = useNavigate();
+  const navigateToNewTicket = () => {
+    navigate("/adduser");
+  };
   return (
     <div
       style={{
@@ -25,7 +30,7 @@ const ContactUs = () => {
             Please Select the Cuisine
           </Dropdown.Toggle>
           <Dropdown.Menu>
-            <Dropdown.Item href="/adduser">SOUTH INDIAN</Dropdown.Item>
+            <Dropdown.Item onClick={navigateToNewTicket}>SOUTH INDIAN</Dropdown.Item>
             <Dropdown.Item href="newticket">THALI</Dropdown.Item>
             <Dropdown.Item href="adduser">HOT BEVERAGES</Dropdown.Item>
             <Dropdown.Item href="adduser">NORTH INDIAN CHAT</Dropdown.Item>

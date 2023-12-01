@@ -13,6 +13,7 @@ import StatusContext from "./store/status-context";
 import React, { useState, useEffect } from "react";
 import Admin from "./Components/Admin";
 import ViewSearchedTicket from "./Components/ViewSearchedTicket";
+import { Routes, Route, Redirect } from "react-router-dom";
 
 const router = createBrowserRouter([
   {

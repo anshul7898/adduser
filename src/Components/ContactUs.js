@@ -6,6 +6,12 @@ const ContactUs = () => {
   const navigateToNewTicket = () => {
     navigate("/adduser");
   };
+  const navigateToSearchPrn = () => {
+    navigate("/searchprn");
+  };
+  const navigateToCancelTicket = () => {
+    navigate("/cancelticket");
+  };
   return (
     <div
       style={{
@@ -31,8 +37,8 @@ const ContactUs = () => {
           </Dropdown.Toggle>
           <Dropdown.Menu>
             <Dropdown.Item onClick={navigateToNewTicket}>SOUTH INDIAN</Dropdown.Item>
-            <Dropdown.Item href="newticket">THALI</Dropdown.Item>
-            <Dropdown.Item href="adduser">HOT BEVERAGES</Dropdown.Item>
+            <Dropdown.Item onClick={navigateToSearchPrn}>THALI</Dropdown.Item>
+            <Dropdown.Item onClick={navigateToCancelTicket}>HOT BEVERAGES</Dropdown.Item>
             <Dropdown.Item href="adduser">NORTH INDIAN CHAT</Dropdown.Item>
             <Dropdown.Item href="adduser">SOUP</Dropdown.Item>
             <Dropdown.Item href="adduser">MANCHURIANS</Dropdown.Item>

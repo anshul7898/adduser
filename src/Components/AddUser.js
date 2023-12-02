@@ -221,6 +221,7 @@ function AddUser() {
   ];
   return (
     <div>
+      <p className={classes.textMenu}><u>SOUTH INDIAN</u></p>
       {menuItems.map((menuItems) => (
         <Card className={classes.input}>
           <Card.Img

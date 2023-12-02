@@ -13,6 +13,7 @@ import StatusContext from "./store/status-context";
 import React, { useState, useEffect } from "react";
 import Admin from "./Components/Admin";
 import ViewSearchedTicket from "./Components/ViewSearchedTicket";
+import BookingList from "./Components/BookingList";
 
 const router = createBrowserRouter([
   {
@@ -28,6 +29,7 @@ const router = createBrowserRouter([
       {  path: "viewticket", element: <ViewTicket /> },
       {  path: "cancelticket", element: <CancelTicket /> },
       {  path: "admin", element: <Admin /> },
+      {  path: "bookinglist", element: <BookingList /> },
       {  path: "viewsearchedticket", element: <ViewSearchedTicket /> },
     ],
   },

@@ -12,6 +12,9 @@ const ContactUs = () => {
   const navigateToCancelTicket = () => {
     navigate("/cancelticket");
   };
+  const navigateToBookingList = () => {
+    navigate("/bookinglist");
+  };
   return (
     <div
       style={{
@@ -39,7 +42,7 @@ const ContactUs = () => {
             <Dropdown.Item onClick={navigateToNewTicket}>SOUTH INDIAN</Dropdown.Item>
             <Dropdown.Item onClick={navigateToSearchPrn}>THALI</Dropdown.Item>
             <Dropdown.Item onClick={navigateToCancelTicket}>HOT BEVERAGES</Dropdown.Item>
-            <Dropdown.Item href="adduser">NORTH INDIAN CHAT</Dropdown.Item>
+            <Dropdown.Item onClick={navigateToBookingList}>NORTH INDIAN CHAT</Dropdown.Item>
             <Dropdown.Item href="adduser">SOUP</Dropdown.Item>
             <Dropdown.Item href="adduser">MANCHURIANS</Dropdown.Item>
             <Dropdown.Item href="adduser">RICE VARIETY</Dropdown.Item>

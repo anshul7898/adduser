@@ -1,117 +1,71 @@
-import Button from "react-bootstrap/Button";
-import classes from "./AddUser.module.css";
-import StatusContext from "../store/status-context";
-import { useContext, useState } from "react";
-import Table from "react-bootstrap/Table";
-import AppHeader from "./AppHeader";
-import { MDBTableHead } from "mdb-react-ui-kit";
-import { useNavigate } from "react-router-dom";
-
-const BookingList = () => {
-  const ctx = useContext(StatusContext);
-  const navigate = useNavigate();
-  let retString = localStorage.getItem("userList");
-  let storageList = JSON.parse(retString);
-  const [checkList, setCheckList] = useState(storageList);
-
-  const changeStatusApprove = (id) => {
-    storageList.map((user) => {
-      if (user.id === id) {
-        user.status = "Approved";
-        localStorage.setItem("userList", JSON.stringify(storageList));
-        navigate("/admin");
-        return;
-      }
-    });
-  };
-
-  const changeStatusReject = (id) => {
-    storageList.map((user) => {
-      if (user.id === id) {
-        user.status = "Rejected";
-        localStorage.setItem("userList", JSON.stringify(storageList));
-        navigate("/admin");
-        return;
-      }
-    });
-  };
-  const isLogin = localStorage.getItem("isLogin");
-  const type = localStorage.getItem("type");
-  var flag = false;
-  if (isLogin == 1 && type == "admin") {
-    flag = true;
-    console.log(flag)
-  }
+import Card from "react-bootstrap/Card";
+import classes from "./BookingList.module.css";
+function BookingList() {
+  let menuItems = [
+    {
+      id: 1,
+      itemName: "SAMBHAR SAMOSA (2Pcs)",
+      itemDescription:
+        "Masala Dosa, also called Masale dosey, is a South Indian dish. It is a type of dosa and has its origin in the town of Udupi in Karnataka.",
+      itemImageUrl:
+        "https://img.freepik.com/premium-photo/south-indian-sambar-samosa-chutney-it-s-fusion-food-which-sambhar-is-from-south-samosas-are-from-north-india_466689-1394.jpg",
+      itemPrice: 60,
+    },
+    {
+      id: 2,
+      itemName: "DAHI SAMOSA (2Pcs)",
+      itemDescription:
+        "Masala Dosa, also called Masale dosey, is a South Indian dish. It is a type of dosa and has its origin in the town of Udupi in Karnataka.",
+      itemImageUrl:
+        "https://img-global.cpcdn.com/recipes/371e1a00a031234b/1200x630cq70/photo.jpg",
+      itemPrice: 100,
+    },
+    {
+      id: 3,
+      itemName: "CHHOLE SAMOSA (2Pcs)",
+      itemDescription:
+        "Masala Dosa, also called Masale dosey, is a South Indian dish. It is a type of dosa and has its origin in the town of Udupi in Karnataka.",
+      itemImageUrl:
+        "https://i.ytimg.com/vi/-uSSAjqzApQ/sddefault.jpg",
+      itemPrice: 100,
+    },
+    {
+      id: 4,
+      itemName: "FRENCH FRIES",
+      itemDescription:
+        "Masala Dosa, also called Masale dosey, is a South Indian dish. It is a type of dosa and has its origin in the town of Udupi in Karnataka.",
+      itemImageUrl:
+        "https://www.indianhealthyrecipes.com/wp-content/uploads/2021/04/french-fries-recipe.jpg",
+      itemPrice: 130,
+    },
+    {
+      id: 5,
+      itemName: "CHHOLE BHATURE",
+      itemDescription:
+        "Masala Dosa, also called Masale dosey, is a South Indian dish. It is a type of dosa and has its origin in the town of Udupi in Karnataka.",
+      itemImageUrl:
+        "https://img-global.cpcdn.com/recipes/1d9ce5d3344e6a34/1200x630cq70/photo.jpg",
+      itemPrice: 150,
+    },
+  ];
   return (
-    <>
-      <AppHeader />
-      {flag && (
-        <Table stripped bordered hover>
-          <MDBTableHead dark>
-            <tr>
-              <th>Booking ID</th>
-              <th>Guest Name</th>
-              <th width="15%">Check-In Date</th>
-              <th>Adult</th>
-              <th>Child</th>
-              <th width="15%">Status</th>
-              <th className="text-center">Action</th>
-            </tr>
-          </MDBTableHead>
-          <tbody>
-            {storageList?.map((user) => (
-              <tr key={user.id}>
-                <td>{user.prn}</td>
-                <td>{user.name}</td>
-                <td width="15%">{user.date}</td>
-                <td>{user.adult}</td>
-                <td>{user.child}</td>
-                <td width="15%">{user.status}</td>
-                {user.status === "Pending" && (
-                  <td className="text-center">
-                    {" "}
-                    <Button
-                      variant="warning"
-                      onClick={() => changeStatusApprove(user.id)}
-                    >
-                      Approve
-                    </Button>{" "}
-                    <Button
-                      variant="danger"
-                      onClick={() => changeStatusReject(user.id)}
-                    >
-                      Reject
-                    </Button>
-                  </td>
-                )}
-                {user.status === "Approved" && <td></td>}
-                {user.status === "Rejected" && <td></td>}
-              </tr>
-            ))}
-          </tbody>
-        </Table>
-      ) }
-
-      {checkList === null && (
-        <div className={classes.noDataFound}>No bookings yet</div>
-      )}
- 
-      {/* <Card className={classes.buttonAlign}>
-        <div className="row">
-          <div className="col">
-            <Button variant="success" onClick={ctx.onchangeApprove}>
-              Approve All
-            </Button>
-          </div>
-          <div className="col">
-            <Button variant="danger" onClick={ctx.onchangeCancel}>
-              Reject All
-            </Button>
-          </div>
-        </div>
-      </Card> */}
-    </>
+    <div>
+      <p className={classes.textMenu}><u>NORTH INDIAN CHAT</u></p>
+      {menuItems.map((menuItems) => (
+        <Card className={classes.input}>
+          <Card.Img
+            className={classes.image}
+            variant="top"
+            src={menuItems.itemImageUrl}
+          />
+          <Card.Body>
+            <Card.Title>{menuItems.itemName} - ₹ {menuItems.itemPrice}/-</Card.Title>
+            {/* <Card.Text>{menuItems.itemDescription}</Card.Text> */}
+          </Card.Body>
+        </Card>
+      ))}
+    </div>
   );
-};
+}
 
 export default BookingList;

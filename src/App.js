@@ -14,6 +14,8 @@ import React, { useState, useEffect } from "react";
 import Admin from "./Components/Admin";
 import ViewSearchedTicket from "./Components/ViewSearchedTicket";
 import BookingList from "./Components/BookingList";
+import Soup from "./Components/Soup";
+import Manchurians from "./Components/Manchurians";
 
 const router = createBrowserRouter([
   {
@@ -29,6 +31,8 @@ const router = createBrowserRouter([
       {  path: "newticket", element: <NewTicket /> },
       {  path: "viewticket", element: <ViewTicket /> },
       {  path: "cancelticket", element: <CancelTicket /> },
+      {  path: "soup", element: <Soup /> },
+      {  path: "manchurians", element: <Manchurians /> },
       {  path: "admin", element: <Admin /> },
       {  path: "viewsearchedticket", element: <ViewSearchedTicket /> },
     ],

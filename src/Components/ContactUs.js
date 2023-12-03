@@ -15,6 +15,12 @@ const ContactUs = () => {
   const navigateToBookingList = () => {
     navigate("/bookinglist");
   };
+  const navigateToSoup = () => {
+    navigate("/soup");
+  };
+  const navigateToManchurians = () => {
+    navigate("/manchurians");
+  };
   return (
     <div
       style={{
@@ -43,28 +49,28 @@ const ContactUs = () => {
             <Dropdown.Item onClick={navigateToSearchPrn}>THALI</Dropdown.Item>
             <Dropdown.Item onClick={navigateToCancelTicket}>HOT BEVERAGES</Dropdown.Item>
             <Dropdown.Item onClick={navigateToBookingList}>NORTH INDIAN CHAT</Dropdown.Item>
-            <Dropdown.Item href="adduser">SOUP</Dropdown.Item>
-            <Dropdown.Item href="adduser">MANCHURIANS</Dropdown.Item>
-            <Dropdown.Item href="adduser">RICE VARIETY</Dropdown.Item>
-            <Dropdown.Item href="adduser">NOODLES</Dropdown.Item>
-            <Dropdown.Item href="adduser">SANDWICHES</Dropdown.Item>
-            <Dropdown.Item href="adduser">PIZZA</Dropdown.Item>
-            <Dropdown.Item href="adduser">SABJI-MANDI</Dropdown.Item>
-            <Dropdown.Item href="adduser">PANEER KA KHAJANA</Dropdown.Item>
-            <Dropdown.Item href="adduser">DAL</Dropdown.Item>
-            <Dropdown.Item href="adduser">TANDOOR STARTER</Dropdown.Item>
-            <Dropdown.Item href="adduser">BASMATI KA KHAZANA</Dropdown.Item>
-            <Dropdown.Item href="adduser">ROTI KI TOKARI</Dropdown.Item>
-            <Dropdown.Item href="adduser">SALADS-PAPAD-RAITA</Dropdown.Item>
-            <Dropdown.Item href="adduser">COLD BEVERAGES</Dropdown.Item>
-            <Dropdown.Item href="adduser">FRESH FRUIT JUICES</Dropdown.Item>
-            <Dropdown.Item href="adduser">FRESH FRUIT SHAKES</Dropdown.Item>
-            <Dropdown.Item href="adduser">FRUIT-SALADS</Dropdown.Item>
-            <Dropdown.Item href="adduser">ICE CREAMS</Dropdown.Item>
-            <Dropdown.Item href="adduser">KIDS - SPECIAL</Dropdown.Item>
-            <Dropdown.Item href="adduser">SUNDAES</Dropdown.Item>
-            <Dropdown.Item href="adduser">VARIETY ICE CREAMS</Dropdown.Item>
-            <Dropdown.Item href="adduser">FALOODAS</Dropdown.Item>
+            <Dropdown.Item onClick={navigateToSoup}>SOUP</Dropdown.Item>
+            <Dropdown.Item onClick={navigateToManchurians}>MANCHURIANS</Dropdown.Item>
+            <Dropdown.Item >RICE VARIETY</Dropdown.Item>
+            <Dropdown.Item >NOODLES</Dropdown.Item>
+            <Dropdown.Item >SANDWICHES</Dropdown.Item>
+            <Dropdown.Item >PIZZA</Dropdown.Item>
+            <Dropdown.Item >SABJI-MANDI</Dropdown.Item>
+            <Dropdown.Item >PANEER KA KHAJANA</Dropdown.Item>
+            <Dropdown.Item >DAL</Dropdown.Item>
+            <Dropdown.Item >TANDOOR STARTER</Dropdown.Item>
+            <Dropdown.Item >BASMATI KA KHAZANA</Dropdown.Item>
+            <Dropdown.Item >ROTI KI TOKARI</Dropdown.Item>
+            <Dropdown.Item >SALADS-PAPAD-RAITA</Dropdown.Item>
+            <Dropdown.Item >COLD BEVERAGES</Dropdown.Item>
+            <Dropdown.Item >FRESH FRUIT JUICES</Dropdown.Item>
+            <Dropdown.Item >FRESH FRUIT SHAKES</Dropdown.Item>
+            <Dropdown.Item >FRUIT-SALADS</Dropdown.Item>
+            <Dropdown.Item >ICE CREAMS</Dropdown.Item>
+            <Dropdown.Item >KIDS - SPECIAL</Dropdown.Item>
+            <Dropdown.Item >SUNDAES</Dropdown.Item>
+            <Dropdown.Item >VARIETY ICE CREAMS</Dropdown.Item>
+            <Dropdown.Item >FALOODAS</Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
     </div>

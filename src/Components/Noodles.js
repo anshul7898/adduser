@@ -89,7 +89,7 @@ function Noodles() {
         itemDescription:
           "Masala Dosa, also called Masale dosey, is a South Indian dish. It is a type of dosa and has its origin in the town of Udupi in Karnataka.",
         itemImageUrl:
-          "https://www.ruchikrandhap.com/wp-content/uploads/2018/03/Mixed-Vegetable-Fried-Rice-2-1.jpg",
+          "http://t3.gstatic.com/images?q=tbn:ANd9GcQO8wko9FtQoRRf5qUIAQN19sRJ4uCkUTlFgJaBnMVoybwEotw84WwdJU_Yge_v-H_TkyDnOw",
         itemPrice: 300,
       },
   ];

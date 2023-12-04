@@ -19,6 +19,7 @@ import Manchurians from "./Components/Manchurians";
 import RiceVariety from "./Components/RiceVariety";
 import Noodles from "./Components/Noodles";
 import Sandwiches from "./Components/Sandwiches";
+import Pizza from "./Components/Pizza";
 const router = createBrowserRouter([
   {
     path: "",
@@ -38,6 +39,7 @@ const router = createBrowserRouter([
       {  path: "ricevariety", element: <RiceVariety /> },
       {  path: "noodles", element: <Noodles /> },
       {  path: "sandwiches", element: <Sandwiches /> },
+      {  path: "pizza", element: <Pizza /> },
       {  path: "admin", element: <Admin /> },
       {  path: "viewsearchedticket", element: <ViewSearchedTicket /> },
     ],

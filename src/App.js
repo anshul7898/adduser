@@ -16,7 +16,9 @@ import ViewSearchedTicket from "./Components/ViewSearchedTicket";
 import BookingList from "./Components/BookingList";
 import Soup from "./Components/Soup";
 import Manchurians from "./Components/Manchurians";
-
+import RiceVariety from "./Components/RiceVariety";
+import Noodles from "./Components/Noodles";
+import Sandwiches from "./Components/Sandwiches";
 const router = createBrowserRouter([
   {
     path: "",
@@ -33,6 +35,9 @@ const router = createBrowserRouter([
       {  path: "cancelticket", element: <CancelTicket /> },
       {  path: "soup", element: <Soup /> },
       {  path: "manchurians", element: <Manchurians /> },
+      {  path: "ricevariety", element: <RiceVariety /> },
+      {  path: "noodles", element: <Noodles /> },
+      {  path: "sandwiches", element: <Sandwiches /> },
       {  path: "admin", element: <Admin /> },
       {  path: "viewsearchedticket", element: <ViewSearchedTicket /> },
     ],

@@ -21,6 +21,15 @@ const ContactUs = () => {
   const navigateToManchurians = () => {
     navigate("/manchurians");
   };
+  const navigateToRiceVariety = () => {
+    navigate("/ricevariety");
+  };
+  const navigateToNoodles = () => {
+    navigate("/noodles");
+  };
+  const navigateToSandwiches = () => {
+    navigate("/sandwiches");
+  };
   return (
     <div
       style={{
@@ -51,9 +60,9 @@ const ContactUs = () => {
             <Dropdown.Item onClick={navigateToBookingList}>NORTH INDIAN CHAT</Dropdown.Item>
             <Dropdown.Item onClick={navigateToSoup}>SOUP</Dropdown.Item>
             <Dropdown.Item onClick={navigateToManchurians}>MANCHURIANS</Dropdown.Item>
-            <Dropdown.Item >RICE VARIETY</Dropdown.Item>
-            <Dropdown.Item >NOODLES</Dropdown.Item>
-            <Dropdown.Item >SANDWICHES</Dropdown.Item>
+            <Dropdown.Item onClick={navigateToRiceVariety}>RICE VARIETY</Dropdown.Item>
+            <Dropdown.Item onClick={navigateToNoodles}>NOODLES</Dropdown.Item>
+            <Dropdown.Item onClick={navigateToSandwiches}>SANDWICHES</Dropdown.Item>
             <Dropdown.Item >PIZZA</Dropdown.Item>
             <Dropdown.Item >SABJI-MANDI</Dropdown.Item>
             <Dropdown.Item >PANEER KA KHAJANA</Dropdown.Item>

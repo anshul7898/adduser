@@ -1,362 +1,218 @@
 import Card from "react-bootstrap/Card";
-import classes from "./SabjiMandi.module.css";
-function SabjiMandi() {
+import classes from "./PaneerkaKhajana.module.css";
+function PaneerkaKhajana() {
   let menuItems = [
     {
       id: 1,
-      itemName: "ALOO MATAR",
+      itemName: "SGS CHEF SPL.",
       itemDescription:
         "Masala Dosa, also called Masale dosey, is a South Indian dish. It is a type of dosa and has its origin in the town of Udupi in Karnataka.",
       itemImageUrl:
-        "https://www.cookwithmanali.com/wp-content/uploads/2016/08/Easy-Aloo-Matar.jpg",
-      itemPrice: 260,
+        "https://images1.livehindustan.com/uploadimage/library/2022/06/08/16_9/16_9_1/paneer_recipe__1654678851.jpg",
+      itemPrice: 400,
     },
     {
       id: 2,
-      itemName: "ALOO GOBI",
+      itemName: "PALAK PANEER",
       itemDescription:
         "Masala Dosa, also called Masale dosey, is a South Indian dish. It is a type of dosa and has its origin in the town of Udupi in Karnataka.",
       itemImageUrl:
-        "https://www.indianhealthyrecipes.com/wp-content/uploads/2022/03/aloo-gobi-recipe.jpg",
-      itemPrice: 260,
+        "https://static.toiimg.com/thumb/53093667.cms?imgsize=325892&width=800&height=800",
+      itemPrice: 350,
     },
     {
       id: 3,
-      itemName: "ALOO PALAK",
+      itemName: "MUTTER PANEER",
       itemDescription:
         "Masala Dosa, also called Masale dosey, is a South Indian dish. It is a type of dosa and has its origin in the town of Udupi in Karnataka.",
       itemImageUrl:
-        "https://www.spiceupthecurry.com/wp-content/uploads/2022/05/aloo-palak-2.jpg",
-      itemPrice: 260,
+        "https://www.indianhealthyrecipes.com/wp-content/uploads/2021/03/matar-paneer.jpg",
+      itemPrice: 350,
     },
     {
       id: 4,
-      itemName: "ALOO METHI",
+      itemName: "CHHOLE PANEER",
       itemDescription:
         "Masala Dosa, also called Masale dosey, is a South Indian dish. It is a type of dosa and has its origin in the town of Udupi in Karnataka.",
       itemImageUrl:
-        "https://www.cookwithmanali.com/wp-content/uploads/2019/04/Aloo-Methi.jpg",
-      itemPrice: 260,
+        "https://akm-img-a-in.tosshub.com/aajtak/images/story/202204/cholia_paneer-sixteen_nine.jpg?size=948:533",
+      itemPrice: 350,
     },
     {
       id: 5,
-      itemName: "ALOO JEERA",
+      itemName: "PANEER BUTTER MASALA",
       itemDescription:
         "Masala Dosa, also called Masale dosey, is a South Indian dish. It is a type of dosa and has its origin in the town of Udupi in Karnataka.",
       itemImageUrl:
-        "https://www.indianhealthyrecipes.com/wp-content/uploads/2018/04/jeera-aloo-recipe.jpg",
-      itemPrice: 280,
+        "https://www.yummytummyaarthi.com/wp-content/uploads/2021/12/1.jpg",
+      itemPrice: 360,
     },
     {
         id: 6,
-        itemName: "ALOO MASALA",
+        itemName: "MALAI KOFTA",
         itemDescription:
           "Masala Dosa, also called Masale dosey, is a South Indian dish. It is a type of dosa and has its origin in the town of Udupi in Karnataka.",
         itemImageUrl:
-          "https://feastwithsafiya.com/wp-content/uploads/2021/07/Masala-potato.jpg",
-        itemPrice: 300,
+          "https://thetableofspice.com/wp-content/uploads/2022/09/Malai-Kofta.jpg",
+        itemPrice: 360,
       },
       {
         id: 7,
-        itemName: "ALOO KASHMIRI",
+        itemName: "PANEER KOFTA",
         itemDescription:
           "Masala Dosa, also called Masale dosey, is a South Indian dish. It is a type of dosa and has its origin in the town of Udupi in Karnataka.",
         itemImageUrl:
-          "https://somethingscookingwithalpa.com/wp-content/uploads/2017/11/KashmiriDumAloo_Wb.jpg",
-        itemPrice: 300,
+          "https://www.archanaskitchen.com/images/archanaskitchen/1-Author/Jyothi_Rajesh/Cauliflower_Paneer_Kofta_Curry.jpg",
+        itemPrice: 350,
       },
       {
         id: 8,
-        itemName: "ALOO DUM PUNJABI",
+        itemName: "PANEER MAKKHANWALA",
         itemDescription:
           "Masala Dosa, also called Masale dosey, is a South Indian dish. It is a type of dosa and has its origin in the town of Udupi in Karnataka.",
         itemImageUrl:
-          "https://www.cookwithmanali.com/wp-content/uploads/2020/08/Punjabi-Dum-Aloo.jpg",
-        itemPrice: 280,
+          "https://www.indianhealthyrecipes.com/wp-content/uploads/2021/05/paneer-makhani.jpg",
+        itemPrice: 350,
       },
       {
         id: 9,
-        itemName: "GOBI MUTTER",
+        itemName: "PANEER TIKKA MASALA",
         itemDescription:
           "Masala Dosa, also called Masale dosey, is a South Indian dish. It is a type of dosa and has its origin in the town of Udupi in Karnataka.",
         itemImageUrl:
-          "https://www.livingsmartandhealthy.com/wp-content/uploads/2022/10/gobi-matar-masala5.jpg",
-        itemPrice: 280,
+          "https://kannanskitchen.com/wp-content/uploads/2023/01/DSC_4752.jpg",
+        itemPrice: 360,
       },
       {
         id: 10,
-        itemName: "PALAK MUTTER",
+        itemName: "PANEER TAKA-TAK",
         itemDescription:
           "Masala Dosa, also called Masale dosey, is a South Indian dish. It is a type of dosa and has its origin in the town of Udupi in Karnataka.",
         itemImageUrl:
-          "https://southindianfoods.in/recipe_picture_enlarge/palak-matar.jpg",
-        itemPrice: 280,
+          "https://i.pinimg.com/564x/bd/34/d3/bd34d3af0eaacb5c8bc5a55320ee469f.jpg",
+        itemPrice: 350,
       },
       {
         id: 11,
-        itemName: "CHOLLE MASALA",
+        itemName: "SHAHI PANEER",
         itemDescription:
           "Masala Dosa, also called Masale dosey, is a South Indian dish. It is a type of dosa and has its origin in the town of Udupi in Karnataka.",
         itemImageUrl:
-          "https://www.cookwithmanali.com/wp-content/uploads/2023/04/Punjabi-Chole-Masala.jpg",
-        itemPrice: 280,
+          "https://myfoodstory.com/wp-content/uploads/2022/04/Shahi-Paneer-1.jpg",
+        itemPrice: 350,
       },
       {
         id: 12,
-        itemName: "GOBI MASALA",
+        itemName: "PANEER JAIPURI",
         itemDescription:
           "Masala Dosa, also called Masale dosey, is a South Indian dish. It is a type of dosa and has its origin in the town of Udupi in Karnataka.",
         itemImageUrl:
-          "https://silkroadrecipes.com/wp-content/uploads/2021/12/Gobi-Masala-Cauliflower-Curry-square.jpg",
-        itemPrice: 280,
+          "https://www.aapkisaheli.com/picture_image/jaipuri-tasty-cheese58297-paneer1.jpg",
+        itemPrice: 350,
       },
       {
         id: 13,
-        itemName: "GREEN PEAS MASALA",
+        itemName: "PANEER BHURJI",
         itemDescription:
           "Masala Dosa, also called Masale dosey, is a South Indian dish. It is a type of dosa and has its origin in the town of Udupi in Karnataka.",
         itemImageUrl:
-          "https://www.foodie-trail.com/wp-content/uploads/2023/02/PHOTO-2023-02-10-08-35-18.jpg",
-        itemPrice: 300,
+          "https://shwetainthekitchen.com/wp-content/uploads/2022/05/Paneer-Bhurji.jpg",
+        itemPrice: 360,
       },
       {
         id: 14,
-        itemName: "RANI PALAK",
+        itemName: "PANEER PASANDA",
         itemDescription:
           "Masala Dosa, also called Masale dosey, is a South Indian dish. It is a type of dosa and has its origin in the town of Udupi in Karnataka.",
         itemImageUrl:
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2JNpCPdeHWSlztNXT7gPhGiocg5_AGU8eAg&usqp=CAU",
-        itemPrice: 300,
+          "https://www.whiskaffair.com/wp-content/uploads/2016/09/Paneer-Pasanda-5.jpg",
+        itemPrice: 370,
       },
       {
         id: 15,
-        itemName: "MIX VEGETABLE",
+        itemName: "PANEER MUSSALAM",
         itemDescription:
           "Masala Dosa, also called Masale dosey, is a South Indian dish. It is a type of dosa and has its origin in the town of Udupi in Karnataka.",
         itemImageUrl:
-          "https://cookingfromheart.com/wp-content/uploads/2019/04/Restaurant-Style-Mixed-Veg-Gravy-1.jpg",
-        itemPrice: 300,
+          "https://myheartbeets.com/wp-content/uploads/2021/11/paneer-musallam-recipe.jpg",
+        itemPrice: 370,
       },
       {
         id: 16,
-        itemName: "VEG KOLHAPURI",
+        itemName: "KADHAI PANEER",
         itemDescription:
           "Masala Dosa, also called Masale dosey, is a South Indian dish. It is a type of dosa and has its origin in the town of Udupi in Karnataka.",
         itemImageUrl:
-          "https://myfoodstory.com/wp-content/uploads/2022/04/Veg-Kolhapuri-3.jpg",
-        itemPrice: 300,
+          "https://www.cubesnjuliennes.com/wp-content/uploads/2020/03/Best-Kadai-Paneer-Recipe.jpg",
+        itemPrice: 350,
       },
       {
         id: 17,
-        itemName: "VEG JAIPURI",
+        itemName: "PANEER GINDER",
         itemDescription:
           "Masala Dosa, also called Masale dosey, is a South Indian dish. It is a type of dosa and has its origin in the town of Udupi in Karnataka.",
         itemImageUrl:
-          "https://www.foodie-trail.com/wp-content/uploads/2022/12/PHOTO-2022-12-09-20-04-39_1.jpg",
-        itemPrice: 300,
+          "https://foodoncall.co.in/wp-content/uploads/2017/09/paneer-ginger.jpg",
+        itemPrice: 360,
       },
       {
         id: 18,
-        itemName: "VEG KOFTA",
+        itemName: "KAJU PANEER",
         itemDescription:
           "Masala Dosa, also called Masale dosey, is a South Indian dish. It is a type of dosa and has its origin in the town of Udupi in Karnataka.",
         itemImageUrl:
-          "https://carveyourcraving.com/wp-content/uploads/2021/09/Best-Malai-Kofta-recipe.jpg",
-        itemPrice: 300,
+          "https://arpitasfoodpod.com/wp-content/uploads/2021/12/DB4B5F39-BCFC-489B-A98B-ED6EF4019C26.jpeg",
+        itemPrice: 370,
       },
       {
         id: 19,
-        itemName: "VEG BULLET",
+        itemName: "PANEER CHATPATA",
         itemDescription:
           "Masala Dosa, also called Masale dosey, is a South Indian dish. It is a type of dosa and has its origin in the town of Udupi in Karnataka.",
         itemImageUrl:
-          "https://www.masalakorb.com/wp-content/uploads/2017/07/Vegetable-Chop-Bengali-Style-How-to-make-Veg-Bullets-V3.jpg",
-        itemPrice: 300,
+          "https://c.ndtvimg.com/paneer_625x300_1528793244164.jpg",
+        itemPrice: 360,
       },
       {
         id: 20,
-        itemName: "VEG MAKKHANWALA",
+        itemName: "LACHHA PANEER",
         itemDescription:
           "Masala Dosa, also called Masale dosey, is a South Indian dish. It is a type of dosa and has its origin in the town of Udupi in Karnataka.",
         itemImageUrl:
-          "https://hebbarskitchen.com/wp-content/uploads/2017/03/veg-makhanwala-recipe-vegetable-makhanwala-veg-makhani-recipe-1-1920x2558.jpeg.webp",
-        itemPrice: 300,
+          "https://i.imgur.com/U6hAfyj.jpg",
+        itemPrice: 350,
       },
       {
         id: 21,
-        itemName: "VEG JAFREZI",
+        itemName: "PANEER DO PYAZA",
         itemDescription:
           "Masala Dosa, also called Masale dosey, is a South Indian dish. It is a type of dosa and has its origin in the town of Udupi in Karnataka.",
         itemImageUrl:
-          "https://mytastycurry.com/wp-content/uploads/2021/03/Vegetable-Jhalfrezi-Recipe.jpg",
-        itemPrice: 320,
+          "https://www.indianhealthyrecipes.com/wp-content/uploads/2022/01/paneer-do-pyaza.jpg",
+        itemPrice: 360,
       },
       {
         id: 22,
-        itemName: "VEG GULMOHAR",
+        itemName: "PANEER LABABDAR",
         itemDescription:
           "Masala Dosa, also called Masale dosey, is a South Indian dish. It is a type of dosa and has its origin in the town of Udupi in Karnataka.",
         itemImageUrl:
-          "https://images.herzindagi.info/image/2021/Mar/edible-flower-recipes.jpg",
-        itemPrice: 300,
+          "https://www.spiceupthecurry.com/wp-content/uploads/2022/09/paneer-lababdar-1.jpg",
+        itemPrice: 390,
       },
       {
         id: 23,
-        itemName: "VEG SAOJI",
+        itemName: "PANEER LAJEEZ",
         itemDescription:
           "Masala Dosa, also called Masale dosey, is a South Indian dish. It is a type of dosa and has its origin in the town of Udupi in Karnataka.",
         itemImageUrl:
-          "https://www.veganricha.com/wp-content/uploads/2011/06/june9-2B039.2.jpg",
-        itemPrice: 320,
-      },
-      {
-        id: 24,
-        itemName: "VEG HILLTOP",
-        itemDescription:
-          "Masala Dosa, also called Masale dosey, is a South Indian dish. It is a type of dosa and has its origin in the town of Udupi in Karnataka.",
-        itemImageUrl:
-          "https://b.zmtcdn.com/data/dish_photos/da2/a22b05b73179afe0cde3cd11ef053da2.jpg",
-        itemPrice: 350,
-      },
-      {
-        id: 25,
-        itemName: "VEG MUMTAZ",
-        itemDescription:
-          "Masala Dosa, also called Masale dosey, is a South Indian dish. It is a type of dosa and has its origin in the town of Udupi in Karnataka.",
-        itemImageUrl:
-          "https://epicureanalley.com/wp-content/uploads/2019/12/Veg-Mumtaz.jpg",
-        itemPrice: 300,
-      },
-      {
-        id: 26,
-        itemName: "VEG KEEMA KASTURI",
-        itemDescription:
-          "Masala Dosa, also called Masale dosey, is a South Indian dish. It is a type of dosa and has its origin in the town of Udupi in Karnataka.",
-        itemImageUrl:
-          "https://www.vegrecipesofindia.com/wp-content/uploads/2013/04/veg-kheema-recipe.jpg",
-        itemPrice: 300,
-      },
-      {
-        id: 27,
-        itemName: "VEG DO PYAZA",
-        itemDescription:
-          "Masala Dosa, also called Masale dosey, is a South Indian dish. It is a type of dosa and has its origin in the town of Udupi in Karnataka.",
-        itemImageUrl:
-          "https://www.archanaskitchen.com/images/archanaskitchen/1-Author/Karthika_Gopalakrishnan/Paneer_Do_Pyaza.jpg",
-        itemPrice: 350,
-      },
-      {
-        id: 28,
-        itemName: "VEG BEGAM BAHAR",
-        itemDescription:
-          "Masala Dosa, also called Masale dosey, is a South Indian dish. It is a type of dosa and has its origin in the town of Udupi in Karnataka.",
-        itemImageUrl:
-          "https://skydecklounge.in/wp-content/uploads/2022/01/Paneer-Begum-Bahar.jpg",
-        itemPrice: 300,
-      },
-      {
-        id: 29,
-        itemName: "HANDI VEG",
-        itemDescription:
-          "Masala Dosa, also called Masale dosey, is a South Indian dish. It is a type of dosa and has its origin in the town of Udupi in Karnataka.",
-        itemImageUrl:
-          "https://www.archanaskitchen.com/images/archanaskitchen/1-Author/pooja/Veg_Handi.jpg",
-        itemPrice: 300,
-      },
-      {
-        id: 30,
-        itemName: "KADAI VEG",
-        itemDescription:
-          "Masala Dosa, also called Masale dosey, is a South Indian dish. It is a type of dosa and has its origin in the town of Udupi in Karnataka.",
-        itemImageUrl:
-          "https://i.pinimg.com/1200x/dc/58/f1/dc58f12bb2bde6037f5dc88598917671.jpg",
-        itemPrice: 350,
-      },
-      {
-        id: 31,
-        itemName: "KAJU CURRY",
-        itemDescription:
-          "Masala Dosa, also called Masale dosey, is a South Indian dish. It is a type of dosa and has its origin in the town of Udupi in Karnataka.",
-        itemImageUrl:
-          "https://static.toiimg.com/photo/74221955.cms",
-        itemPrice: 320,
-      },
-      {
-        id: 32,
-        itemName: "METHI MUTTER MALAI",
-        itemDescription:
-          "Masala Dosa, also called Masale dosey, is a South Indian dish. It is a type of dosa and has its origin in the town of Udupi in Karnataka.",
-        itemImageUrl:
-          "https://www.cookwithmanali.com/wp-content/uploads/2014/08/Best-Methi-Matar-Malai.jpg",
-        itemPrice: 300,
-      },
-      {
-        id: 33,
-        itemName: "STUFFED CAPSICUM",
-        itemDescription:
-          "Masala Dosa, also called Masale dosey, is a South Indian dish. It is a type of dosa and has its origin in the town of Udupi in Karnataka.",
-        itemImageUrl:
-          "https://www.indianhealthyrecipes.com/wp-content/uploads/2019/05/stuffed-capsicum-stuffed-bell-pepper-recipe.jpg",
-        itemPrice: 300,
-      },
-      {
-        id: 34,
-        itemName: "STUFFED TOMATO",
-        itemDescription:
-          "Masala Dosa, also called Masale dosey, is a South Indian dish. It is a type of dosa and has its origin in the town of Udupi in Karnataka.",
-        itemImageUrl:
-          "https://www.allrecipes.com/thmb/2bpzxTSElVw_0I8wWoRxCYXMOGk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/7617238-bce7dabc601243fcb76ed638d3dea515.jpg",
-        itemPrice: 300,
-      },
-      {
-        id: 35,
-        itemName: "KOFTA CURRY",
-        itemDescription:
-          "Masala Dosa, also called Masale dosey, is a South Indian dish. It is a type of dosa and has its origin in the town of Udupi in Karnataka.",
-        itemImageUrl:
-          "https://veenaazmanov.com/wp-content/uploads/2021/08/Meatball-Kofta-Curry-Recipe30.jpg",
-        itemPrice: 320,
-      },
-      {
-        id: 36,
-        itemName: "MUSHROOM MASALA",
-        itemDescription:
-          "Masala Dosa, also called Masale dosey, is a South Indian dish. It is a type of dosa and has its origin in the town of Udupi in Karnataka.",
-        itemImageUrl:
-          "https://ministryofcurry.com/wp-content/uploads/2020/02/mushroom-masala-1-2.jpg",
-        itemPrice: 320,
-      },
-      {
-        id: 37,
-        itemName: "GARDEN VEGETABLE",
-        itemDescription:
-          "Masala Dosa, also called Masale dosey, is a South Indian dish. It is a type of dosa and has its origin in the town of Udupi in Karnataka.",
-        itemImageUrl:
-          "https://www.cookingandme.com/wp-content/uploads/2015/12/mughlai-vegetable-korma-how-to-make-mughlai-vegetable-korma-ed.jpg",
-        itemPrice: 350,
-      },
-      {
-        id: 38,
-        itemName: "NARGISI KOFTA",
-        itemDescription:
-          "Masala Dosa, also called Masale dosey, is a South Indian dish. It is a type of dosa and has its origin in the town of Udupi in Karnataka.",
-        itemImageUrl:
-          "https://www.thespruceeats.com/thmb/Q-TzG4FsMMbkPIqxy2lCoQcZU28=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/NargisiKoftas-56a511073df78cf772862ccb.jpg",
-        itemPrice: 320,
-      },
-      {
-        id: 39,
-        itemName: "CHEESE BUTTER MASALA",
-        itemDescription:
-          "Masala Dosa, also called Masale dosey, is a South Indian dish. It is a type of dosa and has its origin in the town of Udupi in Karnataka.",
-        itemImageUrl:
-          "https://www.ruchiskitchen.com/wp-content/uploads/2020/12/Paneer-butter-masala-recipe-3-500x500.jpg",
-        itemPrice: 370,
+          "https://www.kagomeindia.com/wp-content/uploads/Paneer-Handi-Lazeez_large.jpg",
+        itemPrice: 390,
       },
   ];
   return (
     <div>
-      <p className={classes.textMenu}><u>SABJI-MANDI</u></p>
+      <p className={classes.textMenu}><u>Paneer Ka Khajana</u></p>
       {menuItems.map((menuItems) => (
         <Card className={classes.input}>
           <Card.Img
@@ -374,4 +230,4 @@ function SabjiMandi() {
   );
 }
 
-export default SabjiMandi;
+export default PaneerkaKhajana;

@@ -42,6 +42,9 @@ const ContactUs = () => {
   const navigateToDal = () => {
     navigate("/dal");
   };  
+  const navigateToTandoorStarter = () => {
+    navigate("/tandoorstarter");
+  };  
   return (
     <div
       style={{
@@ -79,7 +82,7 @@ const ContactUs = () => {
             <Dropdown.Item onClick={navigateToSabjiMandi}>SABJI-MANDI</Dropdown.Item>
             <Dropdown.Item onClick={navigateToPaneerkaKhajana}>PANEER KA KHAJANA</Dropdown.Item>
             <Dropdown.Item onClick={navigateToDal}>DAL</Dropdown.Item>
-            <Dropdown.Item >TANDOOR STARTER</Dropdown.Item>
+            <Dropdown.Item onClick={navigateToTandoorStarter}>TANDOOR STARTER</Dropdown.Item>
             <Dropdown.Item >BASMATI KA KHAZANA</Dropdown.Item>
             <Dropdown.Item >ROTI KI TOKARI</Dropdown.Item>
             <Dropdown.Item >SALADS-PAPAD-RAITA</Dropdown.Item>

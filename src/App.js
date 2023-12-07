@@ -23,7 +23,7 @@ import Pizza from "./Components/Pizza";
 import SabjiMandi from "./Components/SabjiMandi";
 import PaneerkaKhajana from "./Components/SabjiMandi";
 import Dal from "./Components/Dal";
-
+import TandoorStarter from "./Components/TandoorStarter";
 const router = createBrowserRouter([
   {
     path: "",
@@ -47,6 +47,7 @@ const router = createBrowserRouter([
       {  path: "sabjimandi", element: <SabjiMandi /> },
       {  path: "paneerkakhajana", element: <PaneerkaKhajana /> },
       {  path: "dal", element: <Dal /> },
+      {  path: "tandoorstarter", element: <TandoorStarter /> },
       {  path: "admin", element: <Admin /> },
       {  path: "viewsearchedticket", element: <ViewSearchedTicket /> },
     ],

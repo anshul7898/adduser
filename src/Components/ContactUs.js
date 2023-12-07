@@ -39,6 +39,9 @@ const ContactUs = () => {
   const navigateToPaneerkaKhajana = () => {
     navigate("/paneerkakhajana");
   };  
+  const navigateToDal = () => {
+    navigate("/dal");
+  };  
   return (
     <div
       style={{
@@ -75,7 +78,7 @@ const ContactUs = () => {
             <Dropdown.Item onClick={navigateToPizza}>PIZZA</Dropdown.Item>
             <Dropdown.Item onClick={navigateToSabjiMandi}>SABJI-MANDI</Dropdown.Item>
             <Dropdown.Item onClick={navigateToPaneerkaKhajana}>PANEER KA KHAJANA</Dropdown.Item>
-            <Dropdown.Item >DAL</Dropdown.Item>
+            <Dropdown.Item onClick={navigateToDal}>DAL</Dropdown.Item>
             <Dropdown.Item >TANDOOR STARTER</Dropdown.Item>
             <Dropdown.Item >BASMATI KA KHAZANA</Dropdown.Item>
             <Dropdown.Item >ROTI KI TOKARI</Dropdown.Item>

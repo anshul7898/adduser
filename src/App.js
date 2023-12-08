@@ -25,7 +25,7 @@ import PaneerkaKhajana from "./Components/SabjiMandi";
 import Dal from "./Components/Dal";
 import TandoorStarter from "./Components/TandoorStarter";
 import BasmatiKaKhazana from "./Components/BasmatiKaKhazana";
-
+import RotiKiTokari from "./Components/RotiKiTokari";
 const router = createBrowserRouter([
   {
     path: "",
@@ -51,6 +51,7 @@ const router = createBrowserRouter([
       {  path: "dal", element: <Dal /> },
       {  path: "tandoorstarter", element: <TandoorStarter /> },
       {  path: "basmatikakhazana", element: <BasmatiKaKhazana /> },
+      {  path: "rotikitokari", element: <RotiKiTokari /> },
       {  path: "admin", element: <Admin /> },
       {  path: "viewsearchedticket", element: <ViewSearchedTicket /> },
     ],

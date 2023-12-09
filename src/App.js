@@ -10,7 +10,7 @@ import NewTicket from "./Components/NewTicket";
 import ViewTicket from "./Components/ViewTicket";
 import CancelTicket from "./Components/CancelTicket";
 import StatusContext from "./store/status-context";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Admin from "./Components/Admin";
 import ViewSearchedTicket from "./Components/ViewSearchedTicket";
 import BookingList from "./Components/BookingList";
@@ -26,6 +26,7 @@ import Dal from "./Components/Dal";
 import TandoorStarter from "./Components/TandoorStarter";
 import BasmatiKaKhazana from "./Components/BasmatiKaKhazana";
 import RotiKiTokari from "./Components/RotiKiTokari";
+import SaladPapadRaita from "./Components/SaladsPapadRaita";
 const router = createBrowserRouter([
   {
     path: "",
@@ -52,6 +53,7 @@ const router = createBrowserRouter([
       {  path: "tandoorstarter", element: <TandoorStarter /> },
       {  path: "basmatikakhazana", element: <BasmatiKaKhazana /> },
       {  path: "rotikitokari", element: <RotiKiTokari /> },
+      {  path: "saladpapadraita", element: <SaladPapadRaita /> },
       {  path: "admin", element: <Admin /> },
       {  path: "viewsearchedticket", element: <ViewSearchedTicket /> },
     ],
@@ -61,17 +63,6 @@ const router = createBrowserRouter([
 function App() {
   const [changedStatus, setChangedStatus] = useState("Pending");
   const [IdState, setIdState] = useState(0);
-  const [isUserLogin, setIsUserLogin] = useState(
-    localStorage.getItem("isLogin")
-  );
-  // prevent back
-  useEffect(() => {
-    if (isUserLogin == 0) {
-      window.addEventListener("popstate", (e) => {
-        window.history.go(1);
-      });
-    }
-  }, [isUserLogin]);
 
   const changedStatusApprove = () => {
     setChangedStatus("Approved");

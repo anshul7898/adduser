@@ -29,6 +29,7 @@ import RotiKiTokari from "./Components/RotiKiTokari";
 import SaladPapadRaita from "./Components/SaladsPapadRaita";
 import ColdBeverages from "./Components/ColdBeverages";
 import FreshFruitJuices from "./Components/FreshFruitJuices";
+import FreshFruitShakes from "./Components/FreshFruitShakes";
 const router = createBrowserRouter([
   {
     path: "",
@@ -58,6 +59,7 @@ const router = createBrowserRouter([
       {  path: "saladpapadraita", element: <SaladPapadRaita /> },
       {  path: "coldbeverages", element: <ColdBeverages /> },
       {  path: "freshfruitjuices", element: <FreshFruitJuices /> },
+      {  path: "freshfruitshakes", element: <FreshFruitShakes /> },
       {  path: "admin", element: <Admin /> },
       {  path: "viewsearchedticket", element: <ViewSearchedTicket /> },
     ],

@@ -54,6 +54,9 @@ const ContactUs = () => {
   const navigateToSaladPapadRaita = () => {
     navigate("/saladpapadraita");
   }; 
+  const navigateToColdBeverages = () => {
+    navigate("/coldbeverages");
+  }; 
   return (
     <div
       style={{
@@ -95,7 +98,7 @@ const ContactUs = () => {
             <Dropdown.Item onClick={navigateToBasmatiKaKhazana}>BASMATI KA KHAZANA</Dropdown.Item>
             <Dropdown.Item onClick={navigateToRotiKiTokari}>ROTI KI TOKARI</Dropdown.Item>
             <Dropdown.Item onClick={navigateToSaladPapadRaita} >SALADS-PAPAD-RAITA</Dropdown.Item>
-            <Dropdown.Item >COLD BEVERAGES</Dropdown.Item>
+            <Dropdown.Item onClick={navigateToColdBeverages}>COLD BEVERAGES</Dropdown.Item>
             <Dropdown.Item >FRESH FRUIT JUICES</Dropdown.Item>
             <Dropdown.Item >FRESH FRUIT SHAKES</Dropdown.Item>
             <Dropdown.Item >FRUIT-SALADS</Dropdown.Item>

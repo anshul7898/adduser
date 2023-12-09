@@ -27,6 +27,7 @@ import TandoorStarter from "./Components/TandoorStarter";
 import BasmatiKaKhazana from "./Components/BasmatiKaKhazana";
 import RotiKiTokari from "./Components/RotiKiTokari";
 import SaladPapadRaita from "./Components/SaladsPapadRaita";
+import ColdBeverages from "./Components/ColdBeverages";
 const router = createBrowserRouter([
   {
     path: "",
@@ -54,6 +55,7 @@ const router = createBrowserRouter([
       {  path: "basmatikakhazana", element: <BasmatiKaKhazana /> },
       {  path: "rotikitokari", element: <RotiKiTokari /> },
       {  path: "saladpapadraita", element: <SaladPapadRaita /> },
+      {  path: "coldbeverages", element: <ColdBeverages /> },
       {  path: "admin", element: <Admin /> },
       {  path: "viewsearchedticket", element: <ViewSearchedTicket /> },
     ],

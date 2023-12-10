@@ -30,6 +30,9 @@ import SaladPapadRaita from "./Components/SaladsPapadRaita";
 import ColdBeverages from "./Components/ColdBeverages";
 import FreshFruitJuices from "./Components/FreshFruitJuices";
 import FreshFruitShakes from "./Components/FreshFruitShakes";
+import FruitSalads from "./Components/FruitSalads";
+import IceCreams from "./Components/IceCreams";
+
 const router = createBrowserRouter([
   {
     path: "",
@@ -60,6 +63,8 @@ const router = createBrowserRouter([
       {  path: "coldbeverages", element: <ColdBeverages /> },
       {  path: "freshfruitjuices", element: <FreshFruitJuices /> },
       {  path: "freshfruitshakes", element: <FreshFruitShakes /> },
+      {  path: "fruitsalads", element: <FruitSalads /> },
+      {  path: "icecreams", element: <IceCreams /> },
       {  path: "admin", element: <Admin /> },
       {  path: "viewsearchedticket", element: <ViewSearchedTicket /> },
     ],

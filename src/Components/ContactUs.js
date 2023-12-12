@@ -78,6 +78,9 @@ const ContactUs = () => {
   const navigateToVarietyIceCreams = () => {
     navigate("/varietyicecreams");
   }; 
+  const navigateToFaloodas = () => {
+    navigate("/faloodas");
+  };
   return (
     <div
       style={{
@@ -127,7 +130,7 @@ const ContactUs = () => {
             <Dropdown.Item onClick={navigateToKidsSpecial}>KIDS - SPECIAL</Dropdown.Item>
             <Dropdown.Item onClick={navigateToSundaes}>SUNDAES</Dropdown.Item>
             <Dropdown.Item onClick={navigateToVarietyIceCreams}>VARIETY ICE CREAMS</Dropdown.Item>
-            <Dropdown.Item >FALOODAS</Dropdown.Item>
+            <Dropdown.Item onClick={navigateToFaloodas}>FALOODAS</Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
     </div>

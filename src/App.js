@@ -4,13 +4,12 @@ import NewBooking from "./Components/NewBooking";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import RootLayout from "./Pages/Root";
 import SearchPrn from "./Components/SearchPrn";
-import Home from "./Components/Home";
 import ContactUs from "./Components/ContactUs";
 import NewTicket from "./Components/NewTicket";
 import ViewTicket from "./Components/ViewTicket";
 import CancelTicket from "./Components/CancelTicket";
 import StatusContext from "./store/status-context";
-import React, { useState } from "react";
+import React from "react";
 import Admin from "./Components/Admin";
 import ViewSearchedTicket from "./Components/ViewSearchedTicket";
 import BookingList from "./Components/BookingList";
@@ -78,50 +77,9 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  const [changedStatus, setChangedStatus] = useState("Pending");
-  const [IdState, setIdState] = useState(0);
-
-  const changedStatusApprove = () => {
-    setChangedStatus("Approved");
-    let retString = localStorage.getItem("userList");
-    let storageList = JSON.parse(retString);
-    storageList.map((user) => {
-      user.status = changedStatus;
-      localStorage.setItem("userList", JSON.stringify(storageList));
-    });
-  };
-
-  const chegedStatusCancel = () => {
-    setChangedStatus("Rejected");
-    let retString = localStorage.getItem("userList");
-    let storageList = JSON.parse(retString);
-    storageList.map((user) => {
-      user.status = changedStatus;
-      localStorage.setItem("userList", JSON.stringify(storageList));
-    });
-  };
-  const changeDeleteId = (id) => {
-    setIdState(id);
-    let retString = localStorage.getItem("userList");
-    let storageList = JSON.parse(retString);
-    storageList.map((obj) => {
-      if (obj.id === id) {
-        obj.status = "canceled";
-        localStorage.setItem("userList", JSON.stringify(storageList));
-      }
-    });
-  };
 
   return (
-    <StatusContext.Provider
-      value={{
-        whatStatus: changedStatus,
-        onchangeApprove: changedStatusApprove,
-        onchangeCancel: chegedStatusCancel,
-        deleteIdState: IdState,
-        deleteId: changeDeleteId,
-      }}
-    >
+    <StatusContext.Provider>
       <RouterProvider router={router} />
     </StatusContext.Provider>
   );
